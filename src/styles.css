@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-bg-color: #1b1b44;
+  }
+
+  .crd-user{
+    margin: auto;
+    margin-top:2em;
+    max-width: 75%;
+}
