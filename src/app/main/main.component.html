@@ -3,12 +3,12 @@
     <div class="card shadow p-3 bg-white rounded crd-user">
       <div class=" d-flex justify-content-between">
           <h2>Lista de Usuarios</h2>
-          <form class="form-inline ">
-              <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Usuario" aria-label="Fecha a consultar" aria-describedby="basic-addon2">
-                  <button class="btn btn-outline-secondary" type="button">Buscar</button>
+
+              <div class="input-group" >
+                  <input type="text" formControlName="userform  " class="form-control" pattern="\b(?!\bdoublevpartners\b)[a-zA-Z']+\b" placeholder="Usuario" aria-describedby="basic-addon2" #userName required>
+                  <button class="btn btn-outline-secondary" (click)="searchName(userName.value)">Buscar</button>
                 </div>
-          </form>
+          
       </div>
       <div>    
         <table class="table table-hover">

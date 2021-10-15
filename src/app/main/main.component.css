@@ -2,3 +2,6 @@
 .rowHover:hover{
     background-color: #f2f2f2;
 }
+.input-group{
+    max-width: 25%;
+}
