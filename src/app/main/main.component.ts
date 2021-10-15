@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from './user';
+import { User } from '../user';
 
 import { DataAPIService } from '../data-api.service';
 import { Router } from '@angular/router';
@@ -12,7 +12,6 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class MainComponent implements OnInit {
   users: User[] = [];
-  data:any[]= []
   username = new FormControl('userform', Validators.min(4));
   
   private iduser:String='';
@@ -25,7 +24,6 @@ export class MainComponent implements OnInit {
   }
 
   gouser(userName:String){
-    console.log("funciono", userName);
     this.dataService.userName =  userName;
     this.router.navigate(["/user"]);
   }
@@ -33,7 +31,6 @@ export class MainComponent implements OnInit {
     if(userName){
       this.dataService.searchUsers(userName)
       .subscribe(data => (this.users = data));
-      console.log(this.users);
     }
 
   }
